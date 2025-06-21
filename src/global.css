@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Imperial+Script&display=swap');
+@import "tailwindcss";
+
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: #FAF9F6;
+  background-color: black;
+}
+
+.heading {
+  font-family: "Gloock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
