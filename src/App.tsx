@@ -1,7 +1,7 @@
 // System imports
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
-import { OrbitControls, useProgress } from '@react-three/drei'
+import { Html, OrbitControls, useProgress } from '@react-three/drei'
 import type { LenisRef } from 'lenis/react'
 import ReactLenis from 'lenis/react'
 
@@ -18,6 +18,14 @@ const Loader = () => {
     <div className="relative h-screen w-screen flex items-center justify-center bg-[#FAF9F6] overflow-hidden">
       <span className="absolute bottom-[100px] right-[50px] text-black text-[12.5rem] leading-0 font-semibold heading">{Math.floor(progress)}%</span>
     </div>
+  );
+}
+
+const ModelLoader = () => {
+  return (
+    <Html>
+      <span className=" text-base font-mono w-fit h-fit">Loading Model...</span>
+    </Html>
   );
 }
 
@@ -74,7 +82,7 @@ const App = () => {
                   <ambientLight intensity={0.5} />
                   <directionalLight intensity={2.75} color="#FFE5BD" position={[3, 5, 5]} />
                   <directionalLight intensity={2.75} color="#D3C1E5" position={[-3, 5, 5]} />
-                  <Suspense fallback={null}>
+                  <Suspense fallback={<ModelLoader />}>
                     <ModelViewer />
                   </Suspense>
                   <OrbitControls />

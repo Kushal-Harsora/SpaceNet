@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Kushal-Harsora/SpaceNet.git",
+  "homepage": "https://kushal-harsora.github.io/SpaceNet/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
